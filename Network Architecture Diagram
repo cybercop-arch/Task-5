@@ -1,0 +1,39 @@
+                   ┌───────────────────────────┐
+                   │       Host Machine         │
+                   │  (Windows / Linux / Mac)   │
+                   └─────────────┬─────────────┘
+                                 │
+                                 │ Virtualization (VMware/VirtualBox)
+                                 ▼
+                  ┌─────────────────────────────────┐
+                  │           Kali Linux VM          │
+                  │---------------------------------│
+                  │ Tools Used:                      │
+                  │ - Burp Suite                     │
+                  │ - SQLMap                         │
+                  │ - Nmap                           │
+                  │ - Browser DevTools               │
+                  │ - cURL                           │
+                  │---------------------------------│
+                  │ Network Adapter: NAT / Host-Only │
+                  └─────────────┬───────────────────┘
+                                │  HTTP Requests / Exploits
+                                ▼
+                  ┌──────────────────────────────────┐
+                  │       DVWA Web Server (VM)        │
+                  │----------------------------------│
+                  │ Apache2 Server                    │
+                  │ PHP (Outdated Version)            │
+                  │ DVWA Application                  │
+                  │----------------------------------│
+                  │ Hostname/IP: http://127.0.0.1     │
+                  │ Security Level: LOW               │
+                  └─────────────┬────────────────────┘
+                                │ SQL Queries
+                                ▼
+                  ┌──────────────────────────────────┐
+                  │           MySQL Database          │
+                  │----------------------------------│
+                  │ Stores DVWA Users, Logs, Inputs   │
+                  │ Vulnerable to SQL Injection       │
+                  └──────────────────────────────────┘
